@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6623B691E343215005C7894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B681E343215005C7894 /* AppDelegate.swift */; };
+		C6623B6B1E343215005C7894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B6A1E343215005C7894 /* ViewController.swift */; };
+		C6623B6E1E343215005C7894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6623B6C1E343215005C7894 /* Main.storyboard */; };
+		C6623B701E343215005C7894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6623B6F1E343215005C7894 /* Assets.xcassets */; };
+		C6623B731E343215005C7894 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6623B711E343215005C7894 /* LaunchScreen.storyboard */; };
+		C6623B7E1E343215005C7894 /* Physanim2DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B7D1E343215005C7894 /* Physanim2DTests.swift */; };
+		C6623B891E343216005C7894 /* Physanim2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B881E343216005C7894 /* Physanim2DUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6623B7A1E343215005C7894 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6623B5D1E343215005C7894 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6623B641E343215005C7894;
+			remoteInfo = Physanim2D;
+		};
+		C6623B851E343215005C7894 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6623B5D1E343215005C7894 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6623B641E343215005C7894;
+			remoteInfo = Physanim2D;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C6623B651E343215005C7894 /* Physanim2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Physanim2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6623B681E343215005C7894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C6623B6A1E343215005C7894 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6623B6D1E343215005C7894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6623B6F1E343215005C7894 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6623B721E343215005C7894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C6623B741E343215005C7894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6623B791E343215005C7894 /* Physanim2DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Physanim2DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6623B7D1E343215005C7894 /* Physanim2DTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physanim2DTests.swift; sourceTree = "<group>"; };
+		C6623B7F1E343215005C7894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6623B841E343215005C7894 /* Physanim2DUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Physanim2DUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6623B881E343216005C7894 /* Physanim2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physanim2DUITests.swift; sourceTree = "<group>"; };
+		C6623B8A1E343216005C7894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6623B621E343215005C7894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6623B761E343215005C7894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6623B811E343215005C7894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6623B5C1E343215005C7894 = {
+			isa = PBXGroup;
+			children = (
+				C6623B671E343215005C7894 /* Physanim2D */,
+				C6623B7C1E343215005C7894 /* Physanim2DTests */,
+				C6623B871E343215005C7894 /* Physanim2DUITests */,
+				C6623B661E343215005C7894 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6623B661E343215005C7894 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6623B651E343215005C7894 /* Physanim2D.app */,
+				C6623B791E343215005C7894 /* Physanim2DTests.xctest */,
+				C6623B841E343215005C7894 /* Physanim2DUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6623B671E343215005C7894 /* Physanim2D */ = {
+			isa = PBXGroup;
+			children = (
+				C6623B681E343215005C7894 /* AppDelegate.swift */,
+				C6623B6A1E343215005C7894 /* ViewController.swift */,
+				C6623B6C1E343215005C7894 /* Main.storyboard */,
+				C6623B6F1E343215005C7894 /* Assets.xcassets */,
+				C6623B711E343215005C7894 /* LaunchScreen.storyboard */,
+				C6623B741E343215005C7894 /* Info.plist */,
+			);
+			path = Physanim2D;
+			sourceTree = "<group>";
+		};
+		C6623B7C1E343215005C7894 /* Physanim2DTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6623B7D1E343215005C7894 /* Physanim2DTests.swift */,
+				C6623B7F1E343215005C7894 /* Info.plist */,
+			);
+			path = Physanim2DTests;
+			sourceTree = "<group>";
+		};
+		C6623B871E343215005C7894 /* Physanim2DUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C6623B881E343216005C7894 /* Physanim2DUITests.swift */,
+				C6623B8A1E343216005C7894 /* Info.plist */,
+			);
+			path = Physanim2DUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6623B641E343215005C7894 /* Physanim2D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6623B8D1E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2D" */;
+			buildPhases = (
+				C6623B611E343215005C7894 /* Sources */,
+				C6623B621E343215005C7894 /* Frameworks */,
+				C6623B631E343215005C7894 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Physanim2D;
+			productName = Physanim2D;
+			productReference = C6623B651E343215005C7894 /* Physanim2D.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6623B781E343215005C7894 /* Physanim2DTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6623B901E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2DTests" */;
+			buildPhases = (
+				C6623B751E343215005C7894 /* Sources */,
+				C6623B761E343215005C7894 /* Frameworks */,
+				C6623B771E343215005C7894 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6623B7B1E343215005C7894 /* PBXTargetDependency */,
+			);
+			name = Physanim2DTests;
+			productName = Physanim2DTests;
+			productReference = C6623B791E343215005C7894 /* Physanim2DTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C6623B831E343215005C7894 /* Physanim2DUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6623B931E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2DUITests" */;
+			buildPhases = (
+				C6623B801E343215005C7894 /* Sources */,
+				C6623B811E343215005C7894 /* Frameworks */,
+				C6623B821E343215005C7894 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6623B861E343215005C7894 /* PBXTargetDependency */,
+			);
+			name = Physanim2DUITests;
+			productName = Physanim2DUITests;
+			productReference = C6623B841E343215005C7894 /* Physanim2DUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6623B5D1E343215005C7894 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = timoffex;
+				TargetAttributes = {
+					C6623B641E343215005C7894 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					C6623B781E343215005C7894 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6623B641E343215005C7894;
+					};
+					C6623B831E343215005C7894 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6623B641E343215005C7894;
+					};
+				};
+			};
+			buildConfigurationList = C6623B601E343215005C7894 /* Build configuration list for PBXProject "Physanim2D" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6623B5C1E343215005C7894;
+			productRefGroup = C6623B661E343215005C7894 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6623B641E343215005C7894 /* Physanim2D */,
+				C6623B781E343215005C7894 /* Physanim2DTests */,
+				C6623B831E343215005C7894 /* Physanim2DUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6623B631E343215005C7894 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6623B731E343215005C7894 /* LaunchScreen.storyboard in Resources */,
+				C6623B701E343215005C7894 /* Assets.xcassets in Resources */,
+				C6623B6E1E343215005C7894 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6623B771E343215005C7894 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6623B821E343215005C7894 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6623B611E343215005C7894 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6623B6B1E343215005C7894 /* ViewController.swift in Sources */,
+				C6623B691E343215005C7894 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6623B751E343215005C7894 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6623B7E1E343215005C7894 /* Physanim2DTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6623B801E343215005C7894 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6623B891E343216005C7894 /* Physanim2DUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6623B7B1E343215005C7894 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6623B641E343215005C7894 /* Physanim2D */;
+			targetProxy = C6623B7A1E343215005C7894 /* PBXContainerItemProxy */;
+		};
+		C6623B861E343215005C7894 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6623B641E343215005C7894 /* Physanim2D */;
+			targetProxy = C6623B851E343215005C7894 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C6623B6C1E343215005C7894 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6623B6D1E343215005C7894 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C6623B711E343215005C7894 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6623B721E343215005C7894 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6623B8B1E343216005C7894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6623B8C1E343216005C7894 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6623B8E1E343216005C7894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Physanim2D/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = timoffex.Physanim2D;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C6623B8F1E343216005C7894 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Physanim2D/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = timoffex.Physanim2D;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C6623B911E343216005C7894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Physanim2DTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = timoffex.Physanim2DTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Physanim2D.app/Physanim2D";
+			};
+			name = Debug;
+		};
+		C6623B921E343216005C7894 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Physanim2DTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = timoffex.Physanim2DTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Physanim2D.app/Physanim2D";
+			};
+			name = Release;
+		};
+		C6623B941E343216005C7894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = Physanim2DUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = timoffex.Physanim2DUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Physanim2D;
+			};
+			name = Debug;
+		};
+		C6623B951E343216005C7894 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = Physanim2DUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = timoffex.Physanim2DUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Physanim2D;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6623B601E343215005C7894 /* Build configuration list for PBXProject "Physanim2D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6623B8B1E343216005C7894 /* Debug */,
+				C6623B8C1E343216005C7894 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6623B8D1E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6623B8E1E343216005C7894 /* Debug */,
+				C6623B8F1E343216005C7894 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C6623B901E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2DTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6623B911E343216005C7894 /* Debug */,
+				C6623B921E343216005C7894 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C6623B931E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2DUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6623B941E343216005C7894 /* Debug */,
+				C6623B951E343216005C7894 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6623B5D1E343215005C7894 /* Project object */;
+}
