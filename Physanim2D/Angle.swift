@@ -9,8 +9,15 @@
 import Foundation
 
 
-class Angle {
+class Angle : CustomStringConvertible {
     private let representative: Double
+    
+    
+    var description: String {
+        get {
+            return "\(representative)"
+        }
+    }
     
     
     lazy var cosine: Double = {

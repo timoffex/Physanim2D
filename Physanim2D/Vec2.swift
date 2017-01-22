@@ -13,10 +13,16 @@ import Foundation
 infix operator •: MultiplicationPrecedence
 
 
-class Vec2 {
+class Vec2 : CustomStringConvertible {
     let x: Double
     let y: Double
     
+    
+    var description: String {
+        get {
+            return "(\(x), \(y))"
+        }
+    }
     
     lazy var sqrMagnitude: Double = {
         return self.x*self.x + self.y*self.y
