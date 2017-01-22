@@ -21,7 +21,6 @@ class Angle {
     
     
     
-   
     
     prefix static func -(param: Angle) -> Angle {
         return Angle(-param.representative)
