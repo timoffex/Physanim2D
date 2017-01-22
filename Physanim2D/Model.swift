@@ -55,12 +55,55 @@ class Model {
     
     
     
+    func addJoint(parent: Int, distance: Double, angle: Angle) {
+        jointParents.append(parent)
+        jointDistances.append(distance)
+        jointAngles.append(angle)
+    }
+    
+    
     
     
     /// Adjusts the model's angles and root position to move certain joints to certain target positions
     func moveToPoseWith(targetPositions targets: [Vec2], forIndices indices: [Int]) {
         
+        var tolerance = 0.1
+        var stepSize = 0.1
         
+        var gradientMagnitude: Double
+        
+        // Perform gradient descent over rootPosition and jointAngles to minimize cost
+        repeat {
+            
+            // 1) Compute positions.
+            let positions = getPositions()
+            
+            // 2) Compute gradient.
+            let gradRoot = computeDCostDRoot(forTargetPositions: targets, withIndices: indices, andPositions: positions)
+            let gradAngle = (1..<numJoints).map { (jointIdx) in
+                return computeDCostDJointAngle(forJoint: jointIdx, forTargetPositions: targets, withIndices: indices, andPositions: positions)
+            }
+            
+            // 3) Adjust parameters in the direction opposite the gradient.
+            rootPosition = rootPosition - stepSize * gradRoot
+            jointAngles = (0..<numJoints).map { (jointIdx) in
+                if jointIdx == 0 {
+                    return Angle(0.0)
+                } else {
+                    return jointAngles[jointIdx] - stepSize * gradAngle[jointIdx-1]
+                }
+            }
+            
+            // 4) Compute gradientMagnitude to check for loop exit condition
+            gradientMagnitude = sqrt(gradRoot.sqrMagnitude + gradAngle.reduce(0, { $0 + $1 }))
+            
+            
+            // 5) Print some debugging information!
+            print("Gradient magnitude: \(gradientMagnitude)")
+            print("Angles: \(jointAngles)")
+            
+            
+        } while gradientMagnitude > tolerance
         
     }
     
@@ -127,6 +170,8 @@ class Model {
     func isJointDescendantOf(parent: Int, child: Int) -> Bool {
         if child == 0 {
             return false
+        } else if child == parent {
+            return true
         } else {
             let par = jointParents[child]
             

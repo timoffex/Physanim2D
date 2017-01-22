@@ -16,6 +16,14 @@ class ViewController: UIViewController {
         
         print("Testing")
         
+        var testingModel = Model(rootPos: Vec2(x: 0, y: 0), rootDir: Vec2(x: 0, y: 1))
+        
+        testingModel.addJoint(parent: 0, distance: 1, angle: Angle(0))
+        
+        
+        testingModel.moveToPoseWith(targetPositions: [Vec2(x: 4, y: 3)], forIndices: [1])
+        
+        print("Final positions: \(testingModel.getPositions())")
     }
 
     override func didReceiveMemoryWarning() {
