@@ -12,6 +12,16 @@ import Foundation
 class Angle {
     private let representative: Double
     
+    
+    lazy var cosine: Double = {
+        return Foundation.cos(self.representative)
+    }()
+
+    lazy var sine: Double = {
+        return Foundation.sin(self.representative)
+    }()
+    
+    
     init(_ rep: Double) {
         representative = Angle.getMod2PI(rep)
     }
@@ -33,6 +43,25 @@ class Angle {
     static func -(left: Angle, right: Angle) -> Angle {
         return left + (-right)
     }
+    
+    
+    
+    static func +(left: Angle, right: Double) -> Angle {
+        return Angle(left.representative + right)
+    }
+    
+    static func -(left: Angle, right: Double) -> Angle {
+        return Angle(left.representative - right)
+    }
+    
+    static func +(left: Double, right: Angle) -> Angle {
+        return right + left
+    }
+    
+    static func -(left: Double, right: Angle) -> Angle {
+        return -right + left
+    }
+    
     
     
     static func IsAngleBetween(_ angle: Angle, ccwFrom: Angle, cwFrom: Angle) -> Bool {

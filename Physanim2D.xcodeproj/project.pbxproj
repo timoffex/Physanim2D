@@ -15,8 +15,8 @@
 		C6623B7E1E343215005C7894 /* Physanim2DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B7D1E343215005C7894 /* Physanim2DTests.swift */; };
 		C6623B891E343216005C7894 /* Physanim2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B881E343216005C7894 /* Physanim2DUITests.swift */; };
 		C6623B971E345913005C7894 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B961E345913005C7894 /* Angle.swift */; };
-		C6623B991E345D37005C7894 /* Joint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B981E345D37005C7894 /* Joint.swift */; };
 		C6623B9B1E345DDF005C7894 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B9A1E345DDF005C7894 /* Vec2.swift */; };
+		C6623B9D1E347479005C7894 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B9C1E347479005C7894 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		C6623B881E343216005C7894 /* Physanim2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physanim2DUITests.swift; sourceTree = "<group>"; };
 		C6623B8A1E343216005C7894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6623B961E345913005C7894 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
-		C6623B981E345D37005C7894 /* Joint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joint.swift; sourceTree = "<group>"; };
 		C6623B9A1E345DDF005C7894 /* Vec2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec2.swift; sourceTree = "<group>"; };
+		C6623B9C1E347479005C7894 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 				C6623B711E343215005C7894 /* LaunchScreen.storyboard */,
 				C6623B741E343215005C7894 /* Info.plist */,
 				C6623B961E345913005C7894 /* Angle.swift */,
-				C6623B981E345D37005C7894 /* Joint.swift */,
 				C6623B9A1E345DDF005C7894 /* Vec2.swift */,
+				C6623B9C1E347479005C7894 /* Model.swift */,
 			);
 			path = Physanim2D;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				C6623B6B1E343215005C7894 /* ViewController.swift in Sources */,
 				C6623B971E345913005C7894 /* Angle.swift in Sources */,
 				C6623B9B1E345DDF005C7894 /* Vec2.swift in Sources */,
-				C6623B991E345D37005C7894 /* Joint.swift in Sources */,
+				C6623B9D1E347479005C7894 /* Model.swift in Sources */,
 				C6623B691E343215005C7894 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +517,7 @@
 				C6623B8F1E343216005C7894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6623B901E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2DTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +526,7 @@
 				C6623B921E343216005C7894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6623B931E343216005C7894 /* Build configuration list for PBXNativeTarget "Physanim2DUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +535,7 @@
 				C6623B951E343216005C7894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
