@@ -15,8 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        print("Testing")
-        
         let testingModel = Model(rootPos: Vec2(x: 0, y: 0), rootDir: Vec2(x: 0, y: 1))
         
         testingModel.addJoint(parent: 0, distance: 1, angle: Angle(M_PI/4))
@@ -26,11 +24,21 @@ class ViewController: UIViewController {
         modelAnimateView.model = testingModel
         modelAnimateView.viewRect = CGRect(x: -10, y: -10, width: 20, height: 20)
         
-        self.modelAnimateView.setNeedsDisplay()
+        modelAnimateView.setNeedsDisplay()
         
-//        testingModel.moveToPoseWith(targetPositions: [Vec2(x: 4, y: 3)], forIndices: [1])
         
-//        print("Final positions: \(testingModel.getPositions())")
+        let startingPositions = testingModel.getPositions()
+        
+        let rootPosition = startingPositions[0]
+        var targetPosition = startingPositions[3]
+        
+        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (tmr) in
+            testingModel.moveToPoseWith(targetPositions: [rootPosition, targetPosition], forIndices: [0, 3])
+            
+            targetPosition = targetPosition + Vec2(x: 0, y: -0.1)
+            
+            self.modelAnimateView.setNeedsDisplay()
+        }
     }
 
     override func didReceiveMemoryWarning() {

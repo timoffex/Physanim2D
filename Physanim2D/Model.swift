@@ -67,24 +67,31 @@ class Model {
     /// Adjusts the model's angles and root position to move certain joints to certain target positions
     func moveToPoseWith(targetPositions targets: [Vec2], forIndices indices: [Int]) {
         
-        var tolerance = 0.1
+        var tolerance = 0.05
         var stepSize = 0.1
         
         var gradientMagnitude: Double
         
+        var finalCost: Double = Double.infinity
+        
         // Perform gradient descent over rootPosition and jointAngles to minimize cost
+        var iteration = 1
         repeat {
             
             // 1) Compute positions.
             let positions = getPositions()
             
-            // 2) Compute gradient.
-            let gradRoot = computeDCostDRoot(forTargetPositions: targets, withIndices: indices, andPositions: positions)
-            let gradAngle = (1..<numJoints).map { (jointIdx) in
-                return computeDCostDJointAngle(forJoint: jointIdx, forTargetPositions: targets, withIndices: indices, andPositions: positions)
+            // 2) Compute cost and gradient.
+            let (cost, gradRoot, gradAngle) = computeCostAndGradient(forTargetPositions: targets, withIndices: indices, andPositions: positions)
+            
+            
+            // 3) If new cost is greater than previous cost, reduce step size.
+            if cost > finalCost {
+                stepSize *= 0.5
             }
             
-            // 3) Adjust parameters in the direction opposite the gradient.
+            
+            // 4) Adjust parameters in the direction opposite the gradient.
             rootPosition = rootPosition - stepSize * gradRoot
             jointAngles = (0..<numJoints).map { (jointIdx) in
                 if jointIdx == 0 {
@@ -94,17 +101,62 @@ class Model {
                 }
             }
             
-            // 4) Compute gradientMagnitude to check for loop exit condition
-            gradientMagnitude = sqrt(gradRoot.sqrMagnitude + gradAngle.reduce(0, { $0 + $1 }))
+            // 5) Compute gradientMagnitude to check for loop exit condition.
+            gradientMagnitude = sqrt(gradRoot.sqrMagnitude + gradAngle.reduce(0, { $0 + $1*$1 }))
             
             
-            // 5) Print some debugging information!
-            print("Gradient magnitude: \(gradientMagnitude)")
-            print("Angles: \(jointAngles)")
+            // 6) Remember our cost during this iteration.
+            finalCost = cost
             
+            
+            // Debugging information
+//            print("Iteration: \(iteration), cost: \(cost), gradient magnitude: \(gradientMagnitude)")
+            iteration += 1
             
         } while gradientMagnitude > tolerance
         
+        
+        // Debugging information
+//        print("Cost: \(finalCost), gradient magnitude: \(gradientMagnitude)")
+        
+    }
+    
+    
+    
+    /// Computes the cost and the gradient of the model.
+    /// Returns (cost, gradient wrt root pos, [gradient wrt angle 1, gradient wrt angle 2, ..., gradient wrt angle numJoints-1])
+    func computeCostAndGradient(forTargetPositions targets: [Vec2], withIndices indices: [Int], andPositions positions: [Vec2]) -> (Double, Vec2, [Double]) {
+        
+        var costSum: Double = 0
+        var rootGradSum: Vec2 = Vec2(x: 0, y: 0)
+        var angleGradSums: [Double] = [Double](repeating: 0, count: numJoints-1)
+        
+        
+        var targetIndex = 0
+        
+        for index in indices {
+            let errorVec = positions[index] - targets[targetIndex]
+            
+            costSum += errorVec.sqrMagnitude
+            rootGradSum = rootGradSum + 2 * errorVec
+            
+            for angleIdx in 0..<numJoints-1 {
+                let angleJointIdx = angleIdx + 1
+                
+                if isJointDescendantOf(parent: angleJointIdx, child: index) {
+                    let dif = positions[index] - positions[jointParents[angleJointIdx]]
+                    
+                    let deriv = dif.rotatedCCW(theta: Angle(M_PI/2))
+                    
+                    angleGradSums[angleIdx] += 2 * errorVec • deriv
+                }
+            }
+            
+            targetIndex = targetIndex + 1
+        }
+        
+        
+        return (costSum, rootGradSum, angleGradSums)
     }
     
     

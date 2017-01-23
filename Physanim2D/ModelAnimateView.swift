@@ -25,7 +25,9 @@ class ModelAnimateView : UIView {
                 // Draw the model.
                 
                 // 1) Get model's joint positions in screen coordinates.
-                var positions = model.getPositions()
+                let positions = model.getPositions()
+                
+//                print(positions)
                 
                 let screenPositions = worldToScreenCoords(pos: positions, screenRect: rect)
                 
@@ -40,15 +42,17 @@ class ModelAnimateView : UIView {
                 
                 
                 // 3) Draw a little circle at the position of every joint.
-                ctx.setFillColor(UIColor.green.cgColor)
                 for idx in 0..<model.numJoints {
                     let pos = screenPositions[idx]
+                    
+                    if idx == 0 {
+                        ctx.setFillColor(UIColor.blue.cgColor)
+                    } else {
+                        ctx.setFillColor(UIColor.green.cgColor)
+                    }
+                    
                     ctx.fillEllipse(in: CGRect(x: pos.x-pointRadius, y: pos.y-pointRadius, width: 2*pointRadius, height: 2*pointRadius))
                 }
-                
-                
-                
-                print(screenPositions)
             }
         }
     }
