@@ -65,9 +65,9 @@ class Model {
     
     
     /// Adjusts the model's angles and root position to move certain joints to certain target positions
-    func moveToPoseWith(targetPositions targets: [Vec2], forIndices indices: [Int]) {
+    func moveToPoseWith(targetPositions targets: [Vec2], forIndices indices: [Int], maxIterations: Int? = nil) {
         
-        var tolerance = 0.05
+        let tolerance = 0.05
         var stepSize = 0.1
         
         var gradientMagnitude: Double
@@ -113,7 +113,7 @@ class Model {
 //            print("Iteration: \(iteration), cost: \(cost), gradient magnitude: \(gradientMagnitude)")
             iteration += 1
             
-        } while gradientMagnitude > tolerance
+        } while gradientMagnitude > tolerance && (maxIterations != nil ? true : iteration <= maxIterations!)
         
         
         // Debugging information

@@ -15,30 +15,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let testingModel = Model(rootPos: Vec2(x: 0, y: 0), rootDir: Vec2(x: 0, y: 1))
         
-        testingModel.addJoint(parent: 0, distance: 1, angle: Angle(M_PI/4))
-        testingModel.addJoint(parent: 1, distance: 2, angle: Angle(-M_PI/3))
-        testingModel.addJoint(parent: 2, distance: 1, angle: Angle(M_PI/5))
+        // Create a model for testing.
+        let testingModel = Model(rootPos: Vec2(x: 0, y: 0), rootDir: Vec2(x: 0, y: -1)) // 0
         
+        // Legs
+        testingModel.addJoint(parent: 0, distance: 1, angle: Angle(7*M_PI/6))           // 1
+        testingModel.addJoint(parent: 1, distance: 1, angle: Angle(0))                  // 2
+        testingModel.addJoint(parent: 0, distance: 1, angle: Angle(5*M_PI/6))           // 3
+        testingModel.addJoint(parent: 3, distance: 1, angle: Angle(0))                  // 4
+        
+        // Torso
+        testingModel.addJoint(parent: 0, distance: 1, angle: Angle(0))                  // 5
+        
+        // Arms
+        testingModel.addJoint(parent: 5, distance: 1, angle: Angle(M_PI/2))             // 6
+        testingModel.addJoint(parent: 6, distance: 1, angle: Angle(0))                  // 7
+        testingModel.addJoint(parent: 5, distance: 1, angle: Angle(-M_PI/2))            // 8
+        testingModel.addJoint(parent: 8, distance: 1, angle: Angle(0))                  // 9
+        
+        // Head
+        testingModel.addJoint(parent: 5, distance: 0.5, angle: Angle(0))
+        
+        
+        // Set up the view and tell it to draw self.
         modelAnimateView.model = testingModel
-        modelAnimateView.viewRect = CGRect(x: -10, y: -10, width: 20, height: 20)
-        
+        modelAnimateView.viewRect = CGRect(x: -5, y: -5, width: 10, height: 10)
         modelAnimateView.setNeedsDisplay()
-        
-        
-        let startingPositions = testingModel.getPositions()
-        
-        let rootPosition = startingPositions[0]
-        var targetPosition = startingPositions[3]
-        
-        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (tmr) in
-            testingModel.moveToPoseWith(targetPositions: [rootPosition, targetPosition], forIndices: [0, 3])
-            
-            targetPosition = targetPosition + Vec2(x: 0, y: -0.1)
-            
-            self.modelAnimateView.setNeedsDisplay()
-        }
     }
 
     override func didReceiveMemoryWarning() {
