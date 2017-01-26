@@ -18,6 +18,11 @@
 		C6623B971E345913005C7894 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B961E345913005C7894 /* Angle.swift */; };
 		C6623B9B1E345DDF005C7894 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B9A1E345DDF005C7894 /* Vec2.swift */; };
 		C6623B9D1E347479005C7894 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6623B9C1E347479005C7894 /* Model.swift */; };
+		C6715F701E3727B00002EEB8 /* ProgramData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6715F6F1E3727B00002EEB8 /* ProgramData.swift */; };
+		C6715F721E3729570002EEB8 /* AnimationPlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6715F711E3729570002EEB8 /* AnimationPlaybackView.swift */; };
+		C6D22F381E37D0F600958E1E /* RenderUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D22F371E37D0F600958E1E /* RenderUtilities.swift */; };
+		C6D22F3A1E37DAE100958E1E /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D22F391E37DAE100958E1E /* PlaybackViewController.swift */; };
+		C6D22F3C1E382AE400958E1E /* SnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D22F3B1E382AE400958E1E /* SnapshotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		C6623B961E345913005C7894 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		C6623B9A1E345DDF005C7894 /* Vec2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec2.swift; sourceTree = "<group>"; };
 		C6623B9C1E347479005C7894 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C6715F6F1E3727B00002EEB8 /* ProgramData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramData.swift; sourceTree = "<group>"; };
+		C6715F711E3729570002EEB8 /* AnimationPlaybackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPlaybackView.swift; sourceTree = "<group>"; };
+		C6D22F371E37D0F600958E1E /* RenderUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderUtilities.swift; sourceTree = "<group>"; };
+		C6D22F391E37DAE100958E1E /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
+		C6D22F3B1E382AE400958E1E /* SnapshotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,11 @@
 				C6623B9A1E345DDF005C7894 /* Vec2.swift */,
 				C6623B9C1E347479005C7894 /* Model.swift */,
 				C64036FB1E357C7300709D26 /* ModelAnimateView.swift */,
+				C6D22F371E37D0F600958E1E /* RenderUtilities.swift */,
+				C6715F6F1E3727B00002EEB8 /* ProgramData.swift */,
+				C6715F711E3729570002EEB8 /* AnimationPlaybackView.swift */,
+				C6D22F391E37DAE100958E1E /* PlaybackViewController.swift */,
+				C6D22F3B1E382AE400958E1E /* SnapshotView.swift */,
 			);
 			path = Physanim2D;
 			sourceTree = "<group>";
@@ -272,11 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6715F721E3729570002EEB8 /* AnimationPlaybackView.swift in Sources */,
+				C6D22F3A1E37DAE100958E1E /* PlaybackViewController.swift in Sources */,
+				C6D22F381E37D0F600958E1E /* RenderUtilities.swift in Sources */,
 				C6623B6B1E343215005C7894 /* ViewController.swift in Sources */,
 				C6623B971E345913005C7894 /* Angle.swift in Sources */,
 				C64036FC1E357C7300709D26 /* ModelAnimateView.swift in Sources */,
+				C6D22F3C1E382AE400958E1E /* SnapshotView.swift in Sources */,
 				C6623B9B1E345DDF005C7894 /* Vec2.swift in Sources */,
 				C6623B9D1E347479005C7894 /* Model.swift in Sources */,
+				C6715F701E3727B00002EEB8 /* ProgramData.swift in Sources */,
 				C6623B691E343215005C7894 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

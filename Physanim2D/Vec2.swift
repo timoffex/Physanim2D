@@ -64,7 +64,7 @@ class Vec2 : CustomStringConvertible {
     }
     
     static func *(left: Vec2, right: Double) -> Vec2 {
-        return Vec2(x: left.x * right, y: left.x * right)
+        return Vec2(x: left.x * right, y: left.y * right)
     }
     
     

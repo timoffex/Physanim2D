@@ -62,6 +62,16 @@ class Model {
     }
     
     
+    func clone() -> Model {
+        let m = Model(rootPos: rootPosition, rootDir: rootReferenceDir)
+        
+        m.jointParents = self.jointParents
+        m.jointAngles = self.jointAngles
+        m.jointDistances = self.jointDistances
+        
+        return m
+    }
+    
     
     
     /// Adjusts the model's angles and root position to move certain joints to certain target positions

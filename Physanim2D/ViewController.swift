@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var modelAnimateView: ModelAnimateView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,9 +38,32 @@ class ViewController: UIViewController {
         testingModel.addJoint(parent: 5, distance: 0.5, angle: Angle(0))
         
         
+        ProgramData.model = testingModel
+        ProgramData.worldViewRect = CGRect(x: -5, y: -5, width: 10, height: 10)
+        
+        
+        
         // Set up the view and tell it to draw self.
-        modelAnimateView.model = testingModel
-        modelAnimateView.viewRect = CGRect(x: -5, y: -5, width: 10, height: 10)
+        
+        // Double-tapping should take a snapshot of the model.
+        let doubleTapRecognizer = UITapGestureRecognizer(target: modelAnimateView, action: #selector(modelAnimateView.doubleTapOccured))
+        doubleTapRecognizer.numberOfTapsRequired = 2
+        
+        
+        // Tapping on the screen should lock/unlock joints.
+        let tapRecognizer = UITapGestureRecognizer(target: modelAnimateView, action: #selector(modelAnimateView.tapOccured))
+        tapRecognizer.numberOfTapsRequired = 1
+        
+        
+        // Panning (dragging) should drag joints.
+        let panRecognizer = UIPanGestureRecognizer(target: modelAnimateView, action: #selector(modelAnimateView.panOccured))
+        panRecognizer.maximumNumberOfTouches = 1
+        
+        
+        modelAnimateView.addGestureRecognizer(doubleTapRecognizer)
+        modelAnimateView.addGestureRecognizer(tapRecognizer)
+        modelAnimateView.addGestureRecognizer(panRecognizer)
+        
         modelAnimateView.setNeedsDisplay()
     }
 

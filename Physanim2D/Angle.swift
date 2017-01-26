@@ -70,6 +70,18 @@ class Angle : CustomStringConvertible {
     }
     
     
+    static func interpolateInnerAngle(from: Angle, to: Angle, withPercentage p: Double) -> Angle {
+        let ccwDif = (to - from).representative
+        
+        if ccwDif <= M_PI {
+            // Rotate counterclockwise
+            return from + Angle(ccwDif * p)
+        } else {
+            // Rotate clockwise
+            return from + Angle((ccwDif - 2 * M_PI) * p)
+        }
+    }
+    
     
     static func IsAngleBetween(_ angle: Angle, ccwFrom: Angle, cwFrom: Angle) -> Bool {
         return (cwFrom - ccwFrom).representative >= (angle - ccwFrom).representative
